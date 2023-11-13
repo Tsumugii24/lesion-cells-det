@@ -10,7 +10,7 @@
 
 ### <div align="center">Demonstration</div>
 
-
+![image-20231113140322207](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F13%2F05f52e14ba9baaf83ef8f0607e0e79c7-image-20231113140322207-865f05.png)
 
 </div>
 
@@ -35,18 +35,23 @@ Then download the weights files that have already been trained properly.
 
 
 
-<details>
+<details open>
 	<summary><h4>Run</h4></summary>
 
+```bash
+$ python gradio_demo.py
+```
 
 
-<details>
+
+<details open>
 	<summary><h4>Datasets</h4></summary>
 
 
 
-<details>
+<details open>
 	<summary><h4>Training</h4></summary>
+
 
 Example models of the project are trained on different methods, ranging from Convolutional Neutral Network to Vision Transformer.
 
@@ -69,13 +74,14 @@ Here is some the training results
 
 
 
-<details>
+<details open>
 	<summary><h4>Train custom models</h4></summary>
 
 
 
-<details>
+<details open>
 	<summary><h3>ToDo</h3></summary>
+
 
 - [ ] train more accurate model for detection
 
@@ -86,8 +92,9 @@ Here is some the training results
 
 
 
-<details>
+<details open>
 	<summary><h3>References</h3></summary>
+
 
 Jocher, G., Chaurasia, A., & Qiu, J. (2023). YOLO by Ultralytics (Version 8.0.0) [Computer software]. https://github.com/ultralytics/ultralytics
 
