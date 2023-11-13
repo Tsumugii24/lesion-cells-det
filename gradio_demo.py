@@ -56,12 +56,18 @@ GYD_SUB_TITLE = """
 """
 
 EXAMPLES_DET = [
-            ["./img_examples/ground_truth_test/normal_intermediate/209566047-209566125-001.BMP", "detr_based", "cpu", 640, 0.6, 0.5, 10, "all range"],
-            ["./img_examples/ground_truth_test/normal_superficiel/209047526-209047717-001.BMP", "vit_based", "cpu", 640, 0.5, 0.5, 20, "all range"],
-            ["./img_examples/comparison_experiment/output_image_1280_1920.jpg", "yolov8_based", "cpu", 640, 0.6, 0.5, 15, "all range"],
-            ["./img_examples/ground_truth_test/light_dysplastic/153354858-153354901-001.BMP", "yolov5_based", "cpu", 640, 0.5, 0.5, 30, "all range"],
-            ["./img_examples/comparison_experiment/output_image_1920_1280.jpg", "cnn_se", "cpu", 640, 0.6, 0.5, 20, "all range"],
-            ["./img_examples/ground_truth_test/moderate_dysplastic/149357849-149357857-001.BMP", "detr_based", "cpu", 640, 0.5, 0.5, 20, "all range"]
+    ["./img_examples/test/moderate0.BMP", "detr_based", "cpu", 640, 0.6,
+     0.5, 10, "all range"],
+    ["./img_examples/test/normal_co0.BMP", "vit_based", "cpu", 640, 0.5,
+     0.5, 20, "all range"],
+    ["./img_examples/test/1280_1920_1.jpg", "yolov8_based", "cpu", 640, 0.6, 0.5, 15,
+     "all range"],
+    ["./img_examples/test/normal_inter1.BMP", "yolov5_based", "cpu", 640, 0.5,
+     0.5, 30, "all range"],
+    ["./img_examples/test/1920_1280_1.jpg", "cnn_se", "cpu", 640, 0.6, 0.5, 20,
+     "all range"],
+    ["./img_examples/test/severe2.BMP", "detr_based", "cpu", 640, 0.5,
+     0.5, 20, "all range"]
 ]
 
 
@@ -182,7 +188,6 @@ def pil_draw(img, score_l, bbox_l, cls_l, cls_index_l, textFont, color_list):
     id = 0
 
     for score, (xmin, ymin, xmax, ymax), label, cls_index in zip(score_l, bbox_l, cls_l, cls_index_l):
-
         img_pil.rectangle([xmin, ymin, xmax, ymax], fill=None, outline=color_list[cls_index], width=2)  # 边界框
         countdown_msg = f"{label} {score:.2f}"
         # text_w, text_h = textFont.getsize(countdown_msg)  # 标签尺寸 pillow 9.5.0
@@ -256,7 +261,6 @@ def model_loading(img_path, device_opt, conf, iou, infer_size, max_det, yolo_mod
 
 # YOLOv8图片检测函数
 def yolo_det_img(img_path, model_name, device_opt, infer_size, conf, iou, max_det, obj_size):
-
     global model, model_name_tmp, device_tmp
 
     s_obj, m_obj, l_obj = 0, 0, 0
@@ -300,7 +304,7 @@ def yolo_det_img(img_path, model_name, device_opt, infer_size, conf, iou, max_de
         elif cls_name_lang == "en":
             # English
             textFont = ImageFont.truetype(str(f"{ROOT_PATH}/fonts/TimesNewRoman.ttf"), size=FONTSIZE)
-        else :
+        else:
             # others
             textFont = ImageFont.truetype(str(f"{ROOT_PATH}/fonts/malgun.ttf"), size=FONTSIZE)
 
@@ -419,9 +423,9 @@ def main(args):
 
     model_cls_name_cp = model_cls_name.copy()  # 类别名称
 
-    custom_theme = gr.themes.Soft(primary_hue="slate",secondary_hue="sky").set(
-                button_secondary_background_fill="*neutral_100",
-                button_secondary_background_fill_hover="*neutral_200")
+    custom_theme = gr.themes.Soft(primary_hue="slate", secondary_hue="sky").set(
+        button_secondary_background_fill="*neutral_100",
+        button_secondary_background_fill_hover="*neutral_200")
     custom_css = '''#disp_image {
         text-align: center; /* Horizontally center the content */
     }'''
@@ -440,9 +444,11 @@ def main(args):
                             inputs_img = gr.Image(image_mode="RGB", type="filepath", label="original image")
                         with gr.Row():
                             # device_opt = gr.Radio(choices=["cpu", "0", "1", "2", "3"], value="cpu", label="device")
-                            device_opt = gr.Radio(choices=["cpu", "gpu 0", "gpu 1", "gpu 2", "gpu 3"], value="cpu", label="device")
+                            device_opt = gr.Radio(choices=["cpu", "gpu 0", "gpu 1", "gpu 2", "gpu 3"], value="cpu",
+                                                  label="device")
                         with gr.Row():
-                            inputs_model = gr.Dropdown(choices=model_names, value=model_name, type="value", label="model")
+                            inputs_model = gr.Dropdown(choices=model_names, value=model_name, type="value",
+                                                       label="model")
                         with gr.Row():
                             inputs_size = gr.Slider(320, 1600, step=1, value=inference_size, label="inference size")
                             max_det = gr.Slider(1, 1000, step=1, value=max_detnum, label="max bbox number")
@@ -450,14 +456,16 @@ def main(args):
                             input_conf = gr.Slider(0, 1, step=slider_step, value=nms_conf, label="confidence threshold")
                             inputs_iou = gr.Slider(0, 1, step=slider_step, value=nms_iou, label="IoU threshold")
                         with gr.Row():
-                            obj_size = gr.Radio(choices=["all range", "small", "medium", "large"], value="all range", label="cell size(relative)")
+                            obj_size = gr.Radio(choices=["all range", "small", "medium", "large"], value="all range",
+                                                label="cell size(relative)")
                         with gr.Row():
                             gr.ClearButton(inputs_img, value="clear")
                             det_btn_img = gr.Button(value='submit', variant="primary")
                         with gr.Row():
                             gr.Examples(examples=EXAMPLES_DET,
                                         fn=yolo_det_img,
-                                        inputs=[inputs_img, inputs_model, device_opt, inputs_size, input_conf, inputs_iou, max_det, obj_size],
+                                        inputs=[inputs_img, inputs_model, device_opt, inputs_size, input_conf,
+                                                inputs_iou, max_det, obj_size],
                                         # outputs=[outputs_img, outputs_objSize, outputs_clsSize],
                                         cache_examples=False)
 
@@ -471,13 +479,11 @@ def main(args):
                         with gr.Row():
                             outputs_clsSize = gr.Label(label="Percentage Statistics of cells lesion degree")
 
-
         det_btn_img.click(fn=yolo_det_img,
                           inputs=[
                               inputs_img, inputs_model, device_opt, inputs_size, input_conf, inputs_iou, max_det,
                               obj_size],
                           outputs=[outputs_img, outputs_objSize, outputs_clsSize])
-
 
     return gyd
 

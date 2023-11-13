@@ -30,7 +30,7 @@
 
 # model
 *.db
-cnn_se.pt
+*.pt
 
 # ide
 .idea/

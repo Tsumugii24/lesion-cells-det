@@ -2,26 +2,46 @@
 
 </div>
 
-### <div align="center">Description</div>
+### <div align="center"><h2>Description</h2></div>
 
 **Lesion-Cells DET is able to detect Multi-granularity Lesion Cells by using several popular machine learning methods.**
+
+
+
+</div>
+
+### <div align="center"><h2>Acknowledgements</h2></div>
+
+***I would like to express my sincere gratitude to Professor Lio for his invaluable guidance in Office Hour and supports throughout the development of this project. Professor's expertise and insightful feedback played a crucial role in shaping the direction of the project.***
+
+![image-20231114020123496](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F14%2Fd9da5305f8dd9b7273c6cafd96a87643-image-20231114020123496-402c3d.png)
 
 </div>
 
 ### <div align="center">Demonstration</div>
 
-![image-20231113140322207](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F13%2F05f52e14ba9baaf83ef8f0607e0e79c7-image-20231113140322207-865f05.png)
+![4a7077aee8660255dd7e08ca4cdd3680-demo-daa408.gif](https://github.com/Tsumugii24/Typora-images/blob/main/images/2023/11/14/4a7077aee8660255dd7e08ca4cdd3680-demo-daa408.gif?raw=true)
+
+
 
 </div>
 
 ### <div align="center">Quick Start</div>
 
 <details open>
-    <summary><h4>Install</h4></summary>
+    <summary><h4>Installation</h4></summary>
 
-I strongly recommend you to use the Conda Environment. Both Anaconda and miniconda is OK!
+​    *I strongly recommend you to use **conda**. Both Anaconda and miniconda is OK!*
 
-Run the following command in the CLI 😊
+
+1. create a virtual **conda** environment for the demo 😆
+
+```bash
+$ conda create -n demo python==3.8
+$ conda activate demo
+```
+
+2. install essential **requirements** by run the following command in the CLI 😊
 
 ```bash
 $ git clone https://github.com/Tsumugii24/lesion-cells-det
@@ -29,11 +49,17 @@ $ cd lesion-cells-det
 $ pip install -r requirements.txt
 ```
 
-Then download the weights files that have already been trained properly.
+3. download the **weights** files from Google Drive that have already been trained properly
 
-</details>
+   here is the link, from where you can download your preferred model and then test its performance 🤗
 
+```html
+https://drive.google.com/drive/folders/1-H4nN8viLdH6nniuiGO-_wJDENDf-BkL?usp=sharing
+```
 
+![image-20231114005824778](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F14%2Fb5fd2a2773cff7b112c2b3328e172bd3-image-20231114005824778-df9e54.png)
+
+4. remember to put the weights files under the root of the project 😉
 
 <details open>
 	<summary><h4>Run</h4></summary>
@@ -42,58 +68,78 @@ Then download the weights files that have already been trained properly.
 $ python gradio_demo.py
 ```
 
-
+Now, if everything is OK, your default browser will open automatically, and gradio is running on local URL:  http://127.0.0.1:7861
 
 <details open>
 	<summary><h4>Datasets</h4></summary>
+The original datasets origins from Kaggle, iFLYTEK AI algorithm competition and other open source sources.
 
+Anyway, we annotated an object detection dataset of more than 2000 cells for a total of 7 types of lesion degree.
 
-
-<details open>
-	<summary><h4>Training</h4></summary>
-
-
-Example models of the project are trained on different methods, ranging from Convolutional Neutral Network to Vision Transformer.
-
-| Model Name   |          Training Device           |                  Open Source                   | Average AP |
-| ------------ | :--------------------------------: | :--------------------------------------------: | :--------: |
-| yolov5_based | NVIDIA GeForce RTX 4090, 24563.5MB |   https://github.com/ultralytics/yolov5.git    |   0.761    |
-| yolov8_based | NVIDIA GeForce RTX 4090, 24563.5MB | https://github.com/ultralytics/ultralytics.git |   0.810    |
-| vit_based    | NVIDIA GeForce RTX 4090, 24563.5MB |      https://github.com/hustvl/YOLOS.git       |   0.834    |
-| detr_based   | NVIDIA GeForce RTX 4090, 24563.5MB |    https://github.com/lyuwenyu/RT-DETR.git     |   0.859    |
-
-Here is some the training results
-
-![7dc7be0a3b11b0e248eaa4f7dea04013-image-20231112163636267-4d13c7.png](https://github.com/Tsumugii24/Typora-images/blob/main/images/2023/11/12/7dc7be0a3b11b0e248eaa4f7dea04013-image-20231112163636267-4d13c7.png?raw=true)
-
-
-
-![image-20231112181735806](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F12%2F5557c5be766788a439b018a1bef97bae-image-20231112181735806-aa3457.png)
-
-
+We decided to share about 800 of them, which should be an adequate number for further test and study.
 
 
 
 <details open>
 	<summary><h4>Train custom models</h4></summary>
 
-
-
-<details open>
-	<summary><h3>ToDo</h3></summary>
-
-
-- [ ] train more accurate model for detection
-
-- [ ] add professor Lio's brief introduction
-- [ ] add a gif demonstration in the Demostration Section
-- [ ] change the large .pt model with google derive link
-- [ ] add the dataset's google drive link, so that everyone can train their own custom models
+You can train your own custom model as long as it can work properly.
 
 
 
-<details open>
-	<summary><h3>References</h3></summary>
+
+
+</div>
+
+### <div align="center"><h2>Training</h2></div>
+
+
+
+Example models of the project are trained with different methods, ranging from Convolutional Neutral Network to Vision Transformer.
+
+| Model Name   |          Training Device           |        Open Source Repo for references         | Average AP |
+| ------------ | :--------------------------------: | :--------------------------------------------: | :--------: |
+| yolov5_based | NVIDIA GeForce RTX 4090, 24563.5MB |   https://github.com/ultralytics/yolov5.git    |   0.721    |
+| yolov8_based | NVIDIA GeForce RTX 4090, 24563.5MB | https://github.com/ultralytics/ultralytics.git |   0.810    |
+| vit_based    | NVIDIA GeForce RTX 4090, 24563.5MB |      https://github.com/hustvl/YOLOS.git       |   0.834    |
+| detr_based   | NVIDIA GeForce RTX 4090, 24563.5MB |    https://github.com/lyuwenyu/RT-DETR.git     |   0.859    |
+
+
+
+- **YOLO **
+
+![yolo](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F14%2F9601a0adf0a87a68fa21b5710abbc597-yolo-99d8b6.jpeg)
+
+
+
+- **Vision Transformer **
+
+![image-20231114014357197](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F14%2Fb6e85205bbb0557f332685178afe18ae-image-20231114014357197-149db2.png)
+
+- **DEtection TRansformer **
+
+![image-20231114014411513](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F14%2F9076db8eefda2096dedf6a3bb81e483c-image-20231114014411513-95398d.png)
+
+
+
+
+
+</div>
+
+### <div align="center"><h2>ToDo</h2></div>
+
+- [x] change the large weights files with Google Drive link sharing
+- [x] add Professor Lio's brief introduction
+- [x] add a .gif demonstration instead of a static image
+- [ ] train more accurate models
+- [ ] upload part of the dataset, so that everyone can train their own customized models
+
+
+
+</div>
+
+### <div align="center"><h2>References</h2></div>
+
 
 
 Jocher, G., Chaurasia, A., & Qiu, J. (2023). YOLO by Ultralytics (Version 8.0.0) [Computer software]. https://github.com/ultralytics/ultralytics
