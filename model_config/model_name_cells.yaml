@@ -1,0 +1,1 @@
+model_names: ["detr_based", "vit_based", "yolov8_based", "yolov5_based", "cnn_se"]

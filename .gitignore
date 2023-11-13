@@ -1,0 +1,53 @@
+# video
+*.mp4
+*.avi
+.ipynb_checkpoints
+/__pycache__
+*/__pycache__
+
+# log
+*.log
+*.data
+*.txt
+*.csv
+
+
+# hyper
+# *.yaml
+*.json
+
+# compressed
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# font
+*.ttc
+# *.ttf
+*.otf
+*.pkl
+
+# model
+*.db
+cnn_se.pt
+
+# ide
+.idea/
+.vscode/
+
+
+/flagged
+/run
+!requirements.txt
+!cls_name/*
+!model_config/*
+!img_examples/*
+!video_examples/*
+!README.md
+
+# testing
+app.py
+test.py
+test*.py
+
