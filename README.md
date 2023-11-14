@@ -91,7 +91,7 @@ https://drive.google.com/drive/folders/1-H4nN8viLdH6nniuiGO-_wJDENDf-BkL?usp=sha
 $ python gradio_demo.py
 ```
 
-Now, if everything is OK, your default browser will open automatically, and Gradio is running on local URL:  http://127.0.0.1:7861 or http://127.0.0.1:7860
+Now, if everything is OK, your default browser will open automatically, and Gradio is running on local URL:  http://127.0.0.1:7860
 
 </details>
 
@@ -209,3 +209,14 @@ Example models of the project are trained with different methods, ranging from C
 16. Liu, Z., Lin, Y., Cao, Y., Hu, H., Wei, Y., Zhang, Z., Lin, S., & Guo, B. (2021). Swin Transformer:  Hierarchical Vision Transformer using Shifted Windows. 2021 IEEE/CVF International Conference  on Computer Vision (ICCV), 9992-10002.
 
 17. Zong, Z., Song, G., & Liu, Y. (2022). DETRs with Collaborative Hybrid Assignments  Training. ArXiv, abs/2211.12860.
+
+
+
+</div>
+
+### <div align="center"><h2>Contact</h2></div>
+
+*Feel free to contact me through GitHub issues or directly send me a mail if you have any questions about the project.* 🐼
+
+My Gmail Address 👉 jsf002016@gmail.com
+

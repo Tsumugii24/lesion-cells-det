@@ -15,12 +15,12 @@ plotly>=5.7.0
 bokeh>=2.4.2
 openpyxl>=3.0.10
 
-# if you want to choose gpu for inference, then you should downlaod pytorch from https://pytorch.org/
+# if you want to choose gpu for inference, then you should download gpu version of pytorch from https://pytorch.org/
 
 # run the following example command
-# pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+# $ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 # then test whether your cuda is available
-# >>python
-# >>import torch
-# >>print(torch.cuda.is_available())
+# $ python
+# >>>import torch
+# >>>print(torch.cuda.is_available())

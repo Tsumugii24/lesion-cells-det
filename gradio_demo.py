@@ -44,7 +44,7 @@ obj_style = ["small", "medium", "large"]
 # description = "<center><h3>Description: This is a WebUI interface demo, Maintained by G1 JIANG SHUFAN</h3></center>"
 
 GYD_TITLE = """
-<p align='center'><a href='https://github.com/Tsumugii24'>
+<p align='center'><a href='https://github.com/Tsumugii24/lesion-cells-det'>
 <img src='https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F12%2F2ce6ad153e2e862d5017864fc5087e59-image-20231112230354573-56a688.png' alt='Simple Icons' ></a>
 <center><h1>Multi-granularity Lesion Cells Object Detection based on deep neural network</h1></center>
 <center><h3>Description: This is a WebUI interface demo, Maintained by G1 JIANG SHUFAN</h3></center>
@@ -52,7 +52,7 @@ GYD_TITLE = """
 """
 
 GYD_SUB_TITLE = """
-  Here is My GitHub: https://github.com/Tsumugii24  😊
+  Here is My GitHub Homepage: https://github.com/Tsumugii24  😊
 """
 
 EXAMPLES_DET = [
@@ -386,7 +386,6 @@ def yolo_det_img(img_path, model_name, device_opt, infer_size, conf, iou, max_de
                 l_obj = l_obj + 1
 
         sml_obj_total = s_obj + m_obj + l_obj
-        objSize_dict = {}
         objSize_dict = {obj_style[i]: [s_obj, m_obj, l_obj][i] / sml_obj_total for i in range(3)}
 
         # ------------ 类别统计 ------------
