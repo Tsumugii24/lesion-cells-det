@@ -4,7 +4,11 @@
 
 ### <div align="center"><h2>Description</h2></div>
 
-**Lesion-Cells DET is able to detect Multi-granularity Lesion Cells by using several popular machine learning methods.**
+**Lesion-Cells DET** stands for Multi-granularity **Lesion Cells Detection**.
+
+The projects employs both CNN-based and Transformer-based neural networks for Object Detection.
+
+The system excels at detecting 7 types of cells with varying granularity in images. Additionally, it provides statistical information on the relative sizes and lesion degree distribution ratios of the identified cells.
 
 
 
@@ -18,15 +22,31 @@
 
 </div>
 
-### <div align="center">Demonstration</div>
+### <div align="center"><h2>Demonstration</h2></div>
 
 ![4a7077aee8660255dd7e08ca4cdd3680-demo-daa408.gif](https://github.com/Tsumugii24/Typora-images/blob/main/images/2023/11/14/4a7077aee8660255dd7e08ca4cdd3680-demo-daa408.gif?raw=true)
 
 
 
+
+
 </div>
 
-### <div align="center">Quick Start</div>
+### <div align="center"><h2>ToDo</h2></div>
+
+- [x] ~~Change the large weights files with Google Drive sharing link~~
+- [x] ~~Add Professor Lio's brief introduction~~
+- [x] ~~Add a .gif demonstration instead of a static image~~
+- [ ] Train models that have better performance
+- [ ] Upload part of the datasets, so that everyone can train their own customized models
+
+
+
+
+
+</div>
+
+### <div align="center"><h2>Quick Start</h2></div>
 
 <details open>
     <summary><h4>Installation</h4></summary>
@@ -61,6 +81,8 @@ https://drive.google.com/drive/folders/1-H4nN8viLdH6nniuiGO-_wJDENDf-BkL?usp=sha
 
 4. remember to put the weights files under the root of the project 😉
 
+</details>
+
 <details open>
 	<summary><h4>Run</h4></summary>
 
@@ -70,22 +92,35 @@ $ python gradio_demo.py
 
 Now, if everything is OK, your default browser will open automatically, and gradio is running on local URL:  http://127.0.0.1:7861
 
+</details>
+
 <details open>
 	<summary><h4>Datasets</h4></summary>
+
 The original datasets origins from Kaggle, iFLYTEK AI algorithm competition and other open source sources.
 
-Anyway, we annotated an object detection dataset of more than 2000 cells for a total of 7 types of lesion degree.
+Anyway, we annotated an object detection dataset of more than 2000 cells for a total of 7 categories.
+
+| class number | class name          |
+| :----------- | :------------------ |
+| 0            | normal_columnar     |
+| 1            | normal_intermediate |
+| 2            | normal_superficiel  |
+| 3            | carcinoma_in_situ   |
+| 4            | light_dysplastic    |
+| 5            | moderate_dysplastic |
+| 6            | severe_dysplastic   |
 
 We decided to share about 800 of them, which should be an adequate number for further test and study.
 
-
+</details>
 
 <details open>
 	<summary><h4>Train custom models</h4></summary>
 
 You can train your own custom model as long as it can work properly.
 
-
+</details>
 
 
 
@@ -93,7 +128,8 @@ You can train your own custom model as long as it can work properly.
 
 ### <div align="center"><h2>Training</h2></div>
 
-
+<details open>
+	<summary><h4>example weights</h4></summary>
 
 Example models of the project are trained with different methods, ranging from Convolutional Neutral Network to Vision Transformer.
 
@@ -104,35 +140,26 @@ Example models of the project are trained with different methods, ranging from C
 | vit_based    | NVIDIA GeForce RTX 4090, 24563.5MB |      https://github.com/hustvl/YOLOS.git       |   0.834    |
 | detr_based   | NVIDIA GeForce RTX 4090, 24563.5MB |    https://github.com/lyuwenyu/RT-DETR.git     |   0.859    |
 
+</details>
 
+<details open>
+	<summary><h4>architecture baselines</h4></summary>
 
-- **YOLO **
+- #### **YOLO**
 
 ![yolo](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F14%2F9601a0adf0a87a68fa21b5710abbc597-yolo-99d8b6.jpeg)
 
 
 
-- **Vision Transformer **
+- #### **Vision Transformer**
 
 ![image-20231114014357197](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F14%2Fb6e85205bbb0557f332685178afe18ae-image-20231114014357197-149db2.png)
 
-- **DEtection TRansformer **
+- #### **DEtection TRansformer**
 
 ![image-20231114014411513](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F14%2F9076db8eefda2096dedf6a3bb81e483c-image-20231114014411513-95398d.png)
 
-
-
-
-
-</div>
-
-### <div align="center"><h2>ToDo</h2></div>
-
-- [x] change the large weights files with Google Drive link sharing
-- [x] add Professor Lio's brief introduction
-- [x] add a .gif demonstration instead of a static image
-- [ ] train more accurate models
-- [ ] upload part of the dataset, so that everyone can train their own customized models
+</details>
 
 
 
