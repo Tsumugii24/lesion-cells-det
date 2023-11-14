@@ -60,11 +60,11 @@ EXAMPLES_DET = [
      0.5, 10, "all range"],
     ["./img_examples/test/normal_co0.BMP", "vit_based", "cpu", 640, 0.5,
      0.5, 20, "all range"],
-    ["./img_examples/test/1280_1920_1.jpg", "yolov8_based", "cpu", 640, 0.6, 0.5, 15,
+    ["./img_examples/test/1280_1920_1.jpg", "yolov8_based", "cpu", 1280, 0.4, 0.5, 15,
      "all range"],
-    ["./img_examples/test/normal_inter1.BMP", "yolov5_based", "cpu", 640, 0.5,
+    ["./img_examples/test/normal_inter1.BMP", "detr_based", "cpu", 640, 0.4,
      0.5, 30, "all range"],
-    ["./img_examples/test/1920_1280_1.jpg", "cnn_se", "cpu", 640, 0.6, 0.5, 20,
+    ["./img_examples/test/1920_1280_1.jpg", "yolov8_based", "cpu", 1280, 0.4, 0.5, 20,
      "all range"],
     ["./img_examples/test/severe2.BMP", "detr_based", "cpu", 640, 0.5,
      0.5, 20, "all range"]
@@ -451,7 +451,7 @@ def main(args):
                                                        label="model")
                         with gr.Row():
                             inputs_size = gr.Slider(320, 1600, step=1, value=inference_size, label="inference size")
-                            max_det = gr.Slider(1, 1000, step=1, value=max_detnum, label="max bbox number")
+                            max_det = gr.Slider(1, 100, step=1, value=max_detnum, label="max bbox number")
                         with gr.Row():
                             input_conf = gr.Slider(0, 1, step=slider_step, value=nms_conf, label="confidence threshold")
                             inputs_iou = gr.Slider(0, 1, step=slider_step, value=nms_iou, label="IoU threshold")

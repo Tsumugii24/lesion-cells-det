@@ -90,16 +90,16 @@ https://drive.google.com/drive/folders/1-H4nN8viLdH6nniuiGO-_wJDENDf-BkL?usp=sha
 $ python gradio_demo.py
 ```
 
-Now, if everything is OK, your default browser will open automatically, and gradio is running on local URL:  http://127.0.0.1:7861
+Now, if everything is OK, your default browser will open automatically, and Gradio is running on local URL:  http://127.0.0.1:7861 or http://127.0.0.1:7860
 
 </details>
 
 <details open>
 	<summary><h4>Datasets</h4></summary>
 
-The original datasets origins from Kaggle, iFLYTEK AI algorithm competition and other open source sources.
+The original datasets origins from **Kaggle**, **iFLYTEK AI algorithm competition** and **other open source** sources.
 
-Anyway, we annotated an object detection dataset of more than 2000 cells for a total of 7 categories.
+Anyway, we annotated an object detection dataset of more than **2000** cells for a total of **7** categories.
 
 | class number | class name          |
 | :----------- | :------------------ |
@@ -133,7 +133,7 @@ You can train your own custom model as long as it can work properly.
 
 Example models of the project are trained with different methods, ranging from Convolutional Neutral Network to Vision Transformer.
 
-| Model Name   |          Training Device           |        Open Source Repo for references         | Average AP |
+| Model Name   |          Training Device           |      Open Source Repository for Reference      | Average AP |
 | ------------ | :--------------------------------: | :--------------------------------------------: | :--------: |
 | yolov5_based | NVIDIA GeForce RTX 4090, 24563.5MB |   https://github.com/ultralytics/yolov5.git    |   0.721    |
 | yolov8_based | NVIDIA GeForce RTX 4090, 24563.5MB | https://github.com/ultralytics/ultralytics.git |   0.810    |
