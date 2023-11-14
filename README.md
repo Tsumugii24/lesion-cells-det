@@ -37,6 +37,7 @@ The system excels at detecting 7 types of cells with varying granularity in imag
 - [x] ~~Change the large weights files with Google Drive sharing link~~
 - [x] ~~Add Professor Lio's brief introduction~~
 - [x] ~~Add a .gif demonstration instead of a static image~~
+- [ ] deploy the demo on HuggingFace
 - [ ] Train models that have better performance
 - [ ] Upload part of the datasets, so that everyone can train their own customized models
 
