@@ -169,42 +169,42 @@ Example models of the project are trained with different methods, ranging from C
 
 
 
-Jocher, G., Chaurasia, A., & Qiu, J. (2023). YOLO by Ultralytics (Version 8.0.0) [Computer software]. https://github.com/ultralytics/ultralytics
+1. Jocher, G., Chaurasia, A., & Qiu, J. (2023). YOLO by Ultralytics (Version 8.0.0) [Computer software]. https://github.com/ultralytics/ultralytics
 
-[Home - Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/)
+2. [Home - Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/)
 
-Jocher, G. (2020). YOLOv5 by Ultralytics (Version 7.0) [Computer software]. https://doi.org/10.5281/zenodo.3908559
+3. Jocher, G. (2020). YOLOv5 by Ultralytics (Version 7.0) [Computer software]. https://doi.org/10.5281/zenodo.3908559
 
+   
 
+4. [GitHub - hustvl/YOLOS: [NeurIPS 2021\] You Only Look at One Sequence](https://github.com/hustvl/YOLOS)
 
-[GitHub - hustvl/YOLOS: [NeurIPS 2021\] You Only Look at One Sequence](https://github.com/hustvl/YOLOS)
+5. [GitHub - ViTAE-Transformer/ViTDet: Unofficial implementation for [ECCV'22\] "Exploring Plain Vision Transformer Backbones for Object Detection"](https://github.com/ViTAE-Transformer/ViTDet)
 
-[GitHub - ViTAE-Transformer/ViTDet: Unofficial implementation for [ECCV'22\] "Exploring Plain Vision Transformer Backbones for Object Detection"](https://github.com/ViTAE-Transformer/ViTDet)
+6. Touvron, H., Cord, M., Douze, M., Massa, F., Sablayrolles, A., & J'egou, H. (2020). Training data-efficient image transformers & distillation through attention. *International Conference on Machine Learning*.
 
-Touvron, H., Cord, M., Douze, M., Massa, F., Sablayrolles, A., & J'egou, H. (2020). Training data-efficient image transformers & distillation through attention. *International Conference on Machine Learning*.
+7. Fang, Y., Liao, B., Wang, X., Fang, J., Qi, J., Wu, R., Niu, J., & Liu, W. (2021). You Only Look at One Sequence: Rethinking Transformer in Vision through Object Detection. *Neural Information Processing Systems*.
 
-Fang, Y., Liao, B., Wang, X., Fang, J., Qi, J., Wu, R., Niu, J., & Liu, W. (2021). You Only Look at One Sequence: Rethinking Transformer in Vision through Object Detection. *Neural Information Processing Systems*.
+8. [YOLOS (huggingface.co)](https://huggingface.co/docs/transformers/main/en/model_doc/yolos)
 
-[YOLOS (huggingface.co)](https://huggingface.co/docs/transformers/main/en/model_doc/yolos)
+   
 
+9. Lv, W., Xu, S., Zhao, Y., Wang, G., Wei, J., Cui, C., Du, Y., Dang, Q., & Liu, Y. (2023). DETRs Beat YOLOs on Real-time Object Detection. *ArXiv, abs/2304.08069*.
 
+10. [GitHub - facebookresearch/detr: End-to-End Object Detection with Transformers](https://github.com/facebookresearch/detr)
 
-Lv, W., Xu, S., Zhao, Y., Wang, G., Wei, J., Cui, C., Du, Y., Dang, Q., & Liu, Y. (2023). DETRs Beat YOLOs on Real-time Object Detection. *ArXiv, abs/2304.08069*.
+11. [PaddleDetection/configs/rtdetr at develop · PaddlePaddle/PaddleDetection · GitHub](https://github.com/PaddlePaddle/PaddleDetection/tree/develop/configs/rtdetr)
 
-[GitHub - facebookresearch/detr: End-to-End Object Detection with Transformers](https://github.com/facebookresearch/detr)
+12. [GitHub - lyuwenyu/RT-DETR: Official RT-DETR (RTDETR paddle pytorch), Real-Time DEtection TRansformer, DETRs Beat YOLOs on Real-time Object Detection. 🔥 🔥 🔥](https://github.com/lyuwenyu/RT-DETR)
 
-[PaddleDetection/configs/rtdetr at develop · PaddlePaddle/PaddleDetection · GitHub](https://github.com/PaddlePaddle/PaddleDetection/tree/develop/configs/rtdetr)
+    
 
-[GitHub - lyuwenyu/RT-DETR: Official RT-DETR (RTDETR paddle pytorch), Real-Time DEtection TRansformer, DETRs Beat YOLOs on Real-time Object Detection. 🔥 🔥 🔥](https://github.com/lyuwenyu/RT-DETR)
+13. J. Hu, L. Shen and G. Sun, "Squeeze-and-Excitation Networks," 2018 IEEE/CVF Conference on  Computer Vision and Pattern Recognition, Salt Lake City, UT, USA, 2018, pp. 7132-7141, doi:  10.1109/CVPR.2018.00745.
 
+14. Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., & Zagoruyko, S. (2020). End-to-End  Object Detection with Transformers. ArXiv, abs/2005.12872.
 
+15. Beal, J., Kim, E., Tzeng, E., Park, D., Zhai, A., & Kislyuk, D. (2020). Toward Transformer-Based  Object Detection. ArXiv, abs/2012.09958.
 
-J. Hu, L. Shen and G. Sun, "Squeeze-and-Excitation Networks," 2018 IEEE/CVF Conference on  Computer Vision and Pattern Recognition, Salt Lake City, UT, USA, 2018, pp. 7132-7141, doi:  10.1109/CVPR.2018.00745.
+16. Liu, Z., Lin, Y., Cao, Y., Hu, H., Wei, Y., Zhang, Z., Lin, S., & Guo, B. (2021). Swin Transformer:  Hierarchical Vision Transformer using Shifted Windows. 2021 IEEE/CVF International Conference  on Computer Vision (ICCV), 9992-10002.
 
-Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., & Zagoruyko, S. (2020). End-to-End  Object Detection with Transformers. ArXiv, abs/2005.12872.
-
-Beal, J., Kim, E., Tzeng, E., Park, D., Zhai, A., & Kislyuk, D. (2020). Toward Transformer-Based  Object Detection. ArXiv, abs/2012.09958.
-
-Liu, Z., Lin, Y., Cao, Y., Hu, H., Wei, Y., Zhang, Z., Lin, S., & Guo, B. (2021). Swin Transformer:  Hierarchical Vision Transformer using Shifted Windows. 2021 IEEE/CVF International Conference  on Computer Vision (ICCV), 9992-10002.
-
-Zong, Z., Song, G., & Liu, Y. (2022). DETRs with Collaborative Hybrid Assignments  Training. ArXiv, abs/2211.12860.
+17. Zong, Z., Song, G., & Liu, Y. (2022). DETRs with Collaborative Hybrid Assignments  Training. ArXiv, abs/2211.12860.
