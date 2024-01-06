@@ -24,9 +24,6 @@ TimesNesRoman = font_manager.FontProperties(fname=TimesNesRoman_path, size=12)
 import yaml
 from PIL import Image, ImageDraw, ImageFont
 
-# from util.fonts_opt import is_fonts
-
-ROOT_PATH = sys.path[0]  # 根目录
 
 # Gradio version
 GYD_VERSION = "Gradio Lesion-Cells DET v1.0"
@@ -251,7 +248,7 @@ def seg_output(img_path, seg_mask_list, color_list, cls_list):
 
 
 # 目标检测和图像分割模型加载
-def model_loading(img_path, device_opt, conf, iou, infer_size, max_det, yolo_model="yolov8n.pt"):
+def model_loading(img_path, device_opt, conf, iou, infer_size, max_det, yolo_model="yolov8_based.pt"):
     model = YOLO(yolo_model)
 
     results = model(source=img_path, device=device_opt, imgsz=infer_size, conf=conf, iou=iou, max_det=max_det)
@@ -273,7 +270,7 @@ def yolo_det_img(img_path, model_name, device_opt, infer_size, conf, iou, max_de
     cls_index_det_stat = []  # 1
 
     # 模型加载
-    predict_results = model_loading(img_path, device_opt, conf, iou, infer_size, max_det, yolo_model=f"{model_name}.pt")
+    predict_results = model_loading(img_path, device_opt, conf, iou, infer_size, max_det, yolo_model=f"models/{model_name}.pt")
     # 检测参数
     xyxy_list = predict_results.boxes.xyxy.cpu().numpy().tolist()
     conf_list = predict_results.boxes.conf.cpu().numpy().tolist()

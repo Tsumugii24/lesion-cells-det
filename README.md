@@ -4,9 +4,9 @@
 
 ### <div align="center"><h2>Description</h2></div>
 
-**Lesion-Cells DET** stands for Multi-granularity **Lesion Cells Detection**.
+**Lesion-Cells DET** stands for Multi-granularity **Lesion Cells DETection**.
 
-The projects employs both CNN-based and Transformer-based neural networks for Object Detection.
+The project employs both CNN-based and Transformer-based neural networks for Object Detection.
 
 The system excels at detecting 7 types of cells with varying granularity in images. Additionally, it provides statistical information on the relative sizes and lesion degree distribution ratios of the identified cells.
 
@@ -24,6 +24,10 @@ The system excels at detecting 7 types of cells with varying granularity in imag
 
 ### <div align="center"><h2>Demonstration</h2></div>
 
+You can easily and directly experience the project demo online on HuggingFace now and compare the effects of different neural network models on cells object detection.
+
+Click here for Online Experience 👉 [Lesion-Cells DET - a Hugging Face Space by Tsumugii](https://huggingface.co/spaces/Tsumugii/lesion-cells-det)
+
 ![4a7077aee8660255dd7e08ca4cdd3680-demo-daa408.gif](https://github.com/Tsumugii24/Typora-images/blob/main/images/2023/11/14/4a7077aee8660255dd7e08ca4cdd3680-demo-daa408.gif?raw=true)
 
 
@@ -37,7 +41,7 @@ The system excels at detecting 7 types of cells with varying granularity in imag
 - [x] ~~Change the large weights files with Google Drive sharing link~~
 - [x] ~~Add Professor Lio's brief introduction~~
 - [x] ~~Add a .gif demonstration instead of a static image~~
-- [ ] deploy the demo on HuggingFace
+- [x] ~~Deploy the project demo on HuggingFace~~
 - [ ] Train models that have better performance
 - [ ] Upload part of the datasets, so that everyone can train their own customized models
 
@@ -52,17 +56,17 @@ The system excels at detecting 7 types of cells with varying granularity in imag
 <details open>
     <summary><h4>Installation</h4></summary>
 
-​    *I strongly recommend you to use **conda**. Both Anaconda and miniconda is OK!*
+​    *I strongly recommend you to use **conda** as the environment. Both Anaconda and miniconda is OK!*
 
 
-1. create a virtual **conda** environment for the demo 😆
+1. Create a virtual **conda** environment for the demo 😆
 
 ```bash
 $ conda create -n demo python==3.8
 $ conda activate demo
 ```
 
-2. install essential **requirements** by run the following command in the CLI 😊
+2. Install essential **requirements** by run the following command in the CLI 😊
 
 ```bash
 $ git clone https://github.com/Tsumugii24/lesion-cells-det
@@ -70,17 +74,25 @@ $ cd lesion-cells-det
 $ pip install -r requirements.txt
 ```
 
-3. download the **weights** files from Google Drive that have already been trained properly
+3. Download the **weights** files that have already been trained properly	
 
-   here is the link, from where you can download your preferred model and then test its performance 🤗
+   (Recommended) run the script  `download_trained_model.py` to automatically download weight files 🤗
 
-```html
-https://drive.google.com/drive/folders/1-H4nN8viLdH6nniuiGO-_wJDENDf-BkL?usp=sharing
+```bash
+$ python download_trained_model.py
 ```
+
+   (Optional) if there is something wrong with your internet connection, you can also try to download manually from 🤗
+
+   $\Rightarrow$ Google Drive  https://drive.google.com/drive/folders/1-H4nN8viLdH6nniuiGO-_wJDENDf-BkL?usp=sharing
 
 ![image-20231114005824778](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F14%2Fb5fd2a2773cff7b112c2b3328e172bd3-image-20231114005824778-df9e54.png)
 
-4. remember to put the weights files under the root of the project 😉
+   $\Rightarrow$ Hugging Face Model Card  https://huggingface.co/Tsumugii/lesion-cells-det/tree/main
+
+![image-20240106191732142](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2024%2F01%2F06%2F78c42a6194428efa79ed499f9401e823-image-20240106191732142-b3de11.png)
+
+   Choose one of the ways above to download your preferred models and remember to put them under the `models` directory 😉
 
 </details>
 
@@ -112,14 +124,15 @@ Anyway, we annotated an object detection dataset of more than **2000** cells for
 | 5            | moderate_dysplastic |
 | 6            | severe_dysplastic   |
 
-We decided to share about 800 of them, which should be an adequate number for further test and study.
+We decided to share about half of them, which should be an adequate number for further researches and studies.
 
 </details>
 
 <details open>
-	<summary><h4>Train custom models</h4></summary>
+	<summary><h4>Train customized models</h4></summary>
 
-You can train your own custom model as long as it can work properly.
+
+You can train your own customized model as long as it can work properly.
 
 </details>
 
@@ -132,7 +145,7 @@ You can train your own custom model as long as it can work properly.
 <details open>
 	<summary><h4>example weights</h4></summary>
 
-Example models of the project are trained with different methods, ranging from Convolutional Neutral Network to Vision Transformer.
+Example models of the project are trained with different methods, ranging from **Convolutional Neutral Network** to **Vision Transformer**.
 
 | Model Name   |          Training Device           |      Open Source Repository for Reference      | Average AP |
 | ------------ | :--------------------------------: | :--------------------------------------------: | :--------: |
@@ -216,7 +229,9 @@ Example models of the project are trained with different methods, ranging from C
 
 ### <div align="center"><h2>Contact</h2></div>
 
-*Feel free to contact me through GitHub issues or directly send me a mail if you have any questions about the project.* 🐼
+👻 *Feel free to contact me through GitHub issues or directly send me a mail if you have any questions about the project.* 👻
 
-My Gmail Address 👉 jsf002016@gmail.com
+<div align="center"><h5>Here is my email address 👉 jsf002016@gmail.com</h5></div>
+
+​	  											
 
