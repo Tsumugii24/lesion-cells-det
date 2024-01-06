@@ -86,11 +86,11 @@ $ python download_trained_model.py
 
    $\Rightarrow$ Google Drive  https://drive.google.com/drive/folders/1-H4nN8viLdH6nniuiGO-_wJDENDf-BkL?usp=sharing
 
-![image-20231114005824778](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2023%2F11%2F14%2Fb5fd2a2773cff7b112c2b3328e172bd3-image-20231114005824778-df9e54.png)
+![b5fd2a2773cff7b112c2b3328e172bd3-image-20231114005824778-df9e54.png](https://github.com/Tsumugii24/Typora-images/blob/main/images/2023/11/14/b5fd2a2773cff7b112c2b3328e172bd3-image-20231114005824778-df9e54.png?raw=true)
 
    $\Rightarrow$ Hugging Face Model Card  https://huggingface.co/Tsumugii/lesion-cells-det/tree/main
 
-![image-20240106191732142](https://cdn.jsdelivr.net/gh/Tsumugii24/Typora-images@main/images/2024%2F01%2F06%2F78c42a6194428efa79ed499f9401e823-image-20240106191732142-b3de11.png)
+![78c42a6194428efa79ed499f9401e823-image-20240106191732142-b3de11.png](https://github.com/Tsumugii24/Typora-images/blob/main/images/2024/01/06/78c42a6194428efa79ed499f9401e823-image-20240106191732142-b3de11.png?raw=true)
 
    Choose one of the ways above to download your preferred models and remember to put them under the `models` directory 😉
 
