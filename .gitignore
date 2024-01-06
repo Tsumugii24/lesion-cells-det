@@ -29,6 +29,7 @@
 *.pkl
 
 # model
+/models/*
 *.db
 *.pt
 
