@@ -226,14 +226,5 @@ Example models of the project are trained with different methods, ranging from *
 
 
 </div>
-
-### <div align="center"><h2>Contact</h2></div>
-
-*Feel free to contact me through GitHub issues or directly send me a mail if you have any questions about the project.* 👻
-
-
-
-<div align="center"><h4>Here is my email address 👉 jsf002016@gmail.com</h4></div>
-
 ​	  											
 
